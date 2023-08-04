@@ -1,0 +1,113 @@
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+.gradient-background {
+  background: linear-gradient(300deg, #381f05, #64360e, #F1DEC9);
+  background-size: 180% 180%;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.myfont {
+  color: #F1DEC9;
+  text-align: center;
+}
+
+.titlefont {
+  color: #381f05;
+}
+
+.linkfont {
+  color: #563410;
+}
+
+.textfont {
+  color: #774b1b;
+}
+
+.obraz {
+  width: 230px;
+}
+
+div .my-9 {
+  height: 30px;
+  font-size: 10px;
+}
+
+.footer-padding {
+  padding-bottom: 20px;
+  height: 20px;
+  bottom: 0;
+}
+
+.footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+
+}
+
+.buttonclass {
+  width: 100%;
+  background: #64360e;
+  color: #F1DEC9;
+}
+
+/* .hover {
+    background: #ab6528;
+  } */
+/* html {
+    min-height: 100%;
+    position: relative;
+  } 
+  
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  
+  .footer-padding {
+      padding-bottom: 60px;
+  }
+  
+  .footer {
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1abc9c;
+  }
+  
+  .footer p {
+      margin-top: 25px;
+      font-size: 12px;
+    color: #fff;
+  } */

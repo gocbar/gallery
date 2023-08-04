@@ -18,9 +18,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", function (request, response) {
-    response.render("home");
+    response.render("home", {
+      startingContent: homeStartingContent,
+      lifeContent: liefeStartingContent,
+      posts: posts
+    });
+    console.log(posts);
   });
 
+  app.get("/contact", function (req, res) {
+    res.render("contact", { contContent: contactContent });
+  });
+  
   app.listen(3000, function () {
     console.log("Server started on port 3000");
   });

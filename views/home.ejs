@@ -1,5 +1,69 @@
 <%- include("partials/header") %>
+<p>
+    <!-- <%= startingContent %> -->
 
-<h1>Hanna maluje</h1>
+  <section>
+    <div class="row">
+      <div class="col-sm-12 col-lg-3">
+        <h3 class="mt-4 linkfont">Wydarzenia</h3>
+        <p class="linkfont">Najnowsze wystawy</p>
+        <img class="obraz mt-2 mb-4" src="./images/rys2.jpg" alt="fantazja"></img>
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link linkfont" href="#">Galeria Sztuki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link linkfont" href="#">Dom Kultury Grazyna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link linkfont" href="#">wernisaż: 9-12-2022, 18:00</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link linkfont" href="#">wystawa do 27-01-2023</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link linkfont" href="#">Wernisaz u Hani</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link linkfont" href="#">Inna wystawa</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 col-sm-12 textfont">
+        <div class="border rounded-5 p-5 mt-4">
+          <h2>Hanna</h2>
+          <h5>Title description, Dec 7, 2020</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p>
+            <%= lifeContent %>
+          </p>
+        </div>
+        <div class="border rounded-5 mt-4 p-5">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description, Sep 2, 2020</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p>
+            <%= startingContent %>
+          </p>
+        </div>
+
+        <% posts.forEach(function(post) { %>
+          <div class="border rounded-5 mt-4 p-5">
+            <h2>
+              <%= post.title %>
+            </h2>
+            <p>
+              <%= post.content.substring(1, 100) + " ... " %>
+             <a href="/posts/<%= post.title %>" > czytaj dalej</a>
+                <!-- <%= post.content %> -->
+            </p>
+          </div>
+          <% }); %>
+
+
+      </div>
+  </section>
+
+  </p>
 
 <%- include("partials/footer") %>
