@@ -20,3 +20,7 @@ app.use(express.static("public"));
 app.get("/", function (request, response) {
     response.render("home");
   });
+
+  app.listen(3000, function () {
+    console.log("Server started on port 3000");
+  });
