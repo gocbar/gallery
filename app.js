@@ -30,6 +30,53 @@ app.get("/", function (request, response) {
     res.render("contact", { contContent: contactContent });
   });
   
+  app.get("/gallery", function (req, res) {
+    res.render("gallery", { galContent: galleryContent });
+  });
+
+  app.get("/about", function (req, res) {
+    res.render("about",);
+  });
+
+  app.get("/compose", function (req, res) {
+    res.render("compose",);
+  });
+
+  app.get("/post", function (req, res) {
+    res.render("post",);
+  });
+
+  app.post("/compose", function (req, res) {
+    // const title = req.body.postTitle;
+    // res.readFile(title);
+    var post = {
+      title: req.body.postTitle,
+      content: req.body.postBody
+    };
+    posts.push(post);
+    res.redirect("/");
+  });
+
+  app.get("/posts/:postName", function (req, res) {
+    const requestedTitle = _.lowerCase(req.params.postName);
+  
+    posts.forEach(function (post) {
+      const storedTitle = _.lowerCase(post.title);
+      const storedContent = post.content;
+  
+      if (storedTitle === requestedTitle) {
+        res.render("post", {
+          titleContent: post.title,
+          contContent: post.content
+        });
+        
+        //console.log("Wszystko się zgadza");
+        // } else {
+        //   console.log("niestety nie zgadza się z wzorcem");      
+      }
+    });
+  });
+// coś zmieniam
   app.listen(3000, function () {
     console.log("Server started on port 3000");
   });
